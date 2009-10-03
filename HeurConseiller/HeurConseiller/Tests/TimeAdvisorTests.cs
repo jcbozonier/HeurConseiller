@@ -1,5 +1,4 @@
 ﻿using System;
-using HeurConseiller.TimeAdvisor;
 using HeurConseiller.TimeAdvisor.AlarmClock;
 using HeurConseiller.TimeAdvisor.SoundLookup;
 using HeurConseiller.TimeAdvisor.Time;

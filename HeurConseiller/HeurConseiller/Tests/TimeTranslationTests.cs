@@ -27,7 +27,6 @@ namespace HeurConseiller.Tests
             Assert.AreEqual(4, languageNeutralTranslation.Hours);
             Assert.AreEqual(minute, languageNeutralTranslation.Minutes);
             Assert.AreEqual(second, languageNeutralTranslation.Seconds);
-            Assert.AreEqual(TimeOfDay.Afternoon, languageNeutralTranslation.TimeOfDay);
         }
     }
 

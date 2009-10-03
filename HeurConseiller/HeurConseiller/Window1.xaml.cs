@@ -1,6 +1,6 @@
 ﻿using System.Windows;
-using HeurConseiller.TimeAdvisor;
 using HeurConseiller.TimeAdvisor.AlarmClock;
+using HeurConseiller.TimeAdvisor.SoundLookup;
 using HeurConseiller.TimeAdvisor.Timers;
 using HeurConseiller.TimeAdvisor.Translation;
 

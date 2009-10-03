@@ -105,8 +105,9 @@
     <Compile Include="TimeAdvisor\AlarmClock\IAlarmClock.cs" />
     <Compile Include="TimeAdvisor\AlarmClock\IAlarmSettingStrategy.cs" />
     <Compile Include="TimeAdvisor\AlarmClock\RandomIntervalStrategy.cs" />
-    <Compile Include="TimeAdvisor\ICommunicationDevice.cs" />
-    <Compile Include="TimeAdvisor\Microphone.cs" />
+    <Compile Include="TimeAdvisor\SoundLookup\ICommunicationDevice.cs" />
+    <Compile Include="TimeAdvisor\SoundLookup\Microphone.cs" />
+    <Compile Include="TimeAdvisor\SoundLookup\IPlaysSound.cs" />
     <Compile Include="TimeAdvisor\SoundLookup\Sound.cs" />
     <Compile Include="TimeAdvisor\SoundLookup\SoundRepository.cs" />
     <Compile Include="TimeAdvisor\TimeAdvisor.cs" />
@@ -115,7 +116,6 @@
     <Compile Include="TimeAdvisor\Time\ConceptualTime.cs" />
     <Compile Include="TimeAdvisor\Time\Time.cs" />
     <Compile Include="TimeAdvisor\Timers\Timer.cs" />
-    <Compile Include="TimeAdvisor\Time\TimeOfDay.cs" />
     <Compile Include="TimeAdvisor\Translation\ITimeTranslation.cs" />
     <Compile Include="TimeAdvisor\Translation\TimeTranslation.cs" />
     <Compile Include="TimeAdvisor\Translation\TranslationRules.cs" />

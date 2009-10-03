@@ -9,7 +9,7 @@
             _FilePath = fileName;
         }
 
-        public void PlayWith(ICanPlay play)
+        public void PlayWith(IPlaysSound play)
         {
             play.PlaySound(_FilePath);
         }

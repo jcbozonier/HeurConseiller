@@ -2,18 +2,12 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interop;
-using HeurConseiller.TimeAdvisor.SoundLookup;
 using Microsoft.DirectX.DirectSound;
 using VorbisDotNet;
 
-namespace HeurConseiller.TimeAdvisor
+namespace HeurConseiller.TimeAdvisor.SoundLookup
 {
-    public interface ICanPlay
-    {
-        void PlaySound(string fileName);
-    }
-
-    public class Microphone : ICommunicationDevice, ICanPlay
+    public class Microphone : ICommunicationDevice, IPlaysSound
     {
         private readonly FrameworkElement _Element;
 
@@ -22,31 +16,25 @@ namespace HeurConseiller.TimeAdvisor
             _Element = (FrameworkElement)window.Content;
         }
 
-        public void SpeakInto(Sound[] o)
+        public void SpeakInto(Sound[] sounds)
         {
-            foreach(var sound in o)
+            foreach(var sound in sounds)
             {
                 sound.PlayWith(this);
             }
-            //var buffer = new VorbisDotNet.VorbisBuffer();
         }
 
         public void PlaySound(string fileName)
         {
             IntPtr handle = IntPtr.Zero;
             _Element.Dispatcher.Invoke(((Action)(() =>
-                                                {
-                                                    handle = ((HwndSource) PresentationSource.FromVisual(_Element)).Handle;
-                                                })));
+                                                     {
+                                                         handle = ((HwndSource) PresentationSource.FromVisual(_Element)).Handle;
+                                                     })));
             
 
             var device = new Device(DSoundHelper.DefaultPlaybackDevice);
             device.SetCooperativeLevel(handle, CooperativeLevel.Normal);
-
-            //using (var player = new SoundPlayer(@"C:\Code\French121\HeurConseiller\HeurConseiller\AudioFiles\bugsbunny.wav"))
-            //{
-            //    player.Play();
-            //}
 
             using (var buffer = new VorbisBuffer(fileName, device, false, VorbisCaps.GlobalFocus))
             {

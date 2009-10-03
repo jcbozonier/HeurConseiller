@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HeurConseiller.TimeAdvisor
+namespace HeurConseiller.TimeAdvisor.AlarmClock
 {
     public class AlarmClockEventArgs : EventArgs
     {

@@ -1,5 +1,6 @@
 ﻿
 using HeurConseiller.TimeAdvisor.AlarmClock;
+using HeurConseiller.TimeAdvisor.SoundLookup;
 using HeurConseiller.TimeAdvisor.Translation;
 
 namespace HeurConseiller.TimeAdvisor
